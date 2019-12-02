@@ -38,7 +38,6 @@ ul {
       height: $item_height;
       width: $item_width;
       grid-row: span 2;
-      //border: 1px solid $green;
 
       &::before {
         content: "";

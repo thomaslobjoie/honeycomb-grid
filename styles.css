@@ -33,7 +33,7 @@ ul {
         left: -38px;
         right: -38px;
         pointer-events: none;
-        background-image: url("https://www.digitalworld.net/themes/custom/digital_world/assets/images/hexagon_on.png");
+        background-image: url("images/hexagon_off.png");
         background-position: 0 0;
         background-repeat: no-repeat; }
   .honeycomb-wrapper[data-honeycomb-columns="2"] .item:nth-child(even) {

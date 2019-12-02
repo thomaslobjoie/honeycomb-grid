@@ -15,21 +15,20 @@ ul {
   .honeycomb-wrapper .honeycomb-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, 7.92rem);
-    grid-auto-rows: 4.65rem;
+    grid-auto-rows: 9.3rem;
     justify-content: center;
     padding: 0 0 4.65rem; }
     .honeycomb-wrapper .honeycomb-list .item {
-      padding: 3rem 1rem;
-      position: relative;
+      padding: 4rem 1rem;
       text-align: center;
+      position: relative;
       height: 9.3rem;
-      width: 7.92rem;
-      grid-row: span 2; }
+      width: 7.92rem; }
       .honeycomb-wrapper .honeycomb-list .item::before {
         content: "";
         position: absolute;
-        top: -22px;
-        bottom: -22px;
+        top: -16px;
+        bottom: -1px;
         left: -38px;
         right: -38px;
         pointer-events: none;

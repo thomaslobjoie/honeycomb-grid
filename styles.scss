@@ -33,25 +33,24 @@ ul {
   .honeycomb-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, $item_width);
-    grid-auto-rows: $item_height/2;
+    grid-auto-rows: $item_height;
     justify-content: center;
     padding: 0 0 $item_height / 2;
 
     // List item
     .item {
-      padding: 3rem 1rem;
-      position: relative;
+      padding: 4rem 1rem;
       text-align: center;
+      position: relative;
       height: $item_height;
       width: $item_width;
-      grid-row: span 2;
 
       // Hexagon png
       &::before {
         content: "";
         position: absolute;
-        top: -22px;
-        bottom: -22px;
+        top: -16px;
+        bottom: -1px;
         left: -38px;
         right: -38px;
         pointer-events: none;

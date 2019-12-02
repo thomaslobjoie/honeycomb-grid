@@ -1,0 +1,54 @@
+body {
+  background-color: #96b38a;
+  color: #ddca7e; }
+
+ul {
+  list-style: none; }
+
+.container-fluid {
+  background-color: #1e1f26;
+  padding: 2rem;
+  max-width: 72rem; }
+
+.honeycomb-wrapper {
+  max-width: 43.56rem; }
+  .honeycomb-wrapper .honeycomb-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 7.92rem);
+    grid-auto-rows: 4.65rem;
+    justify-content: center;
+    padding: 0 0 4.65rem; }
+    .honeycomb-wrapper .honeycomb-list .item {
+      padding: 1rem;
+      position: relative;
+      text-align: center;
+      height: 9.3rem;
+      width: 7.92rem;
+      grid-row: span 2; }
+      .honeycomb-wrapper .honeycomb-list .item::before {
+        content: "";
+        position: absolute;
+        top: -22px;
+        bottom: -22px;
+        left: -38px;
+        right: -38px;
+        pointer-events: none;
+        background-image: url("https://www.digitalworld.net/themes/custom/digital_world/assets/images/hexagon_on.png");
+        background-position: 0 0;
+        background-repeat: no-repeat; }
+  .honeycomb-wrapper[data-honeycomb-columns="2"] .item:nth-child(even) {
+    margin-top: 4.65rem; }
+  .honeycomb-wrapper[data-honeycomb-columns="3"] .item:nth-child(n) {
+    margin-top: 0; }
+  .honeycomb-wrapper[data-honeycomb-columns="3"] .item:nth-child(3n + 2) {
+    margin-top: 4.65rem; }
+  .honeycomb-wrapper[data-honeycomb-columns="4"] .item:nth-child(n) {
+    margin-top: 0; }
+  .honeycomb-wrapper[data-honeycomb-columns="4"] .item:nth-child(even) {
+    margin-top: 4.65rem; }
+  .honeycomb-wrapper[data-honeycomb-columns="5"] .item:nth-child(n) {
+    margin-top: 0; }
+  .honeycomb-wrapper[data-honeycomb-columns="5"] .item:nth-child(5n + 2), .honeycomb-wrapper[data-honeycomb-columns="5"] .item:nth-child(5n + 4) {
+    margin-top: 4.65rem; }
+
+/*# sourceMappingURL=styles.css.map */

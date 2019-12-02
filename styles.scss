@@ -1,10 +1,13 @@
+// Grid item dimensions
 $item_width: 7.92rem;
 $item_height: 9.3rem;
 
+// Colors
 $green: #96b38a;
 $gold: #ddca7e;
 $black: #1e1f26;
 
+// Global
 body {
   background-color: $green;
   color: $gold;
@@ -14,31 +17,36 @@ ul {
   list-style: none;
 }
 
+// Bootstrap container
 .container-fluid {
   background-color: $black;
   padding: 2rem;
   max-width: 72rem;
 }
 
+// Grid wrapper
 .honeycomb-wrapper {
+  // Limit the grid to 5 columns
   max-width: $item_width * 5.5;
 
+  // List container
   .honeycomb-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, $item_width);
     grid-auto-rows: $item_height/2;
     justify-content: center;
-
     padding: 0 0 $item_height / 2;
 
+    // List item
     .item {
-      padding: 1rem;
+      padding: 3rem 1rem;
       position: relative;
       text-align: center;
       height: $item_height;
       width: $item_width;
       grid-row: span 2;
 
+      // Hexagon png
       &::before {
         content: "";
         position: absolute;
@@ -56,6 +64,7 @@ ul {
     }
   }
 
+  // 2 Columns
   &[data-honeycomb-columns="2"] {
     .item {
       &:nth-child(even) {
@@ -63,6 +72,7 @@ ul {
       }
     }
   }
+  // 3 Columns
   &[data-honeycomb-columns="3"] {
     .item {
       &:nth-child(n) {
@@ -73,6 +83,7 @@ ul {
       }
     }
   }
+  // 4 Columns
   &[data-honeycomb-columns="4"] {
     .item {
       &:nth-child(n) {
@@ -83,6 +94,7 @@ ul {
       }
     }
   }
+  // 5 Columns
   &[data-honeycomb-columns="5"] {
     .item {
       &:nth-child(n) {

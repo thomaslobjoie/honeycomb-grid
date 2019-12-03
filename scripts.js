@@ -3,12 +3,12 @@ $(document).ready(resizeHoneycomb);
 $(window).on('resize', resizeHoneycomb);
 
 function resizeHoneycomb() {
-    // get the grid wrapper
-    const $honeycombWrapper = $('.honeycomb-wrapper');
+    // get the grid list
+    const $honeycombList = $('.honeycomb-list');
     // get the grid item
-    const $item = $honeycombWrapper.find('.item');
+    const $honeycombItem = $honeycombList.find('.item');
     // get number of columns in the grid
-    const honeycombColumns = Math.floor($honeycombWrapper.innerWidth() / $item.innerWidth());
-    // update honeycomb columns attribute (limited to 5)
-    $honeycombWrapper.attr('data-honeycomb-columns', (honeycombColumns > 5) ? 5 : honeycombColumns);
+    const honeycombColumns = Math.floor($honeycombList.innerWidth() / $honeycombItem.innerWidth());
+    // update honeycomb columns attribute
+    $honeycombList.attr('data-honeycomb-columns', honeycombColumns);
 }

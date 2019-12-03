@@ -7,7 +7,7 @@ $green: #96b38a;
 $gold: #ddca7e;
 $black: #1e1f26;
 
-// Global
+// Global styling
 body {
   background-color: $green;
   color: $gold;
@@ -21,74 +21,61 @@ ul {
 .container-fluid {
   background-color: $black;
   padding: 2rem;
-  max-width: 72rem;
+  max-width: 82rem;
 }
 
-// Grid wrapper
-.honeycomb-wrapper {
-  // Limit the grid to 5 columns
-  max-width: $item_width * 5.5;
+// List container
+.honeycomb-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $item_width);
+  grid-auto-rows: $item_height;
+  justify-content: center;
+  padding: 0 0 $item_height / 2;
 
-  // List container
-  .honeycomb-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, $item_width);
-    grid-auto-rows: $item_height;
-    justify-content: center;
-    padding: 0 0 $item_height / 2;
+  // List item
+  .item {
+    padding: 4rem 1rem;
+    text-align: center;
+    position: relative;
+    height: $item_height;
+    width: $item_width;
 
-    // List item
-    .item {
-      padding: 4rem 1rem;
-      text-align: center;
-      position: relative;
-      height: $item_height;
-      width: $item_width;
-
-      // Hexagon png
-      &::before {
-        content: "";
-        position: absolute;
-        top: -16px;
-        bottom: -1px;
-        left: -38px;
-        right: -38px;
-        pointer-events: none;
-        background: {
-          image: url('images/hexagon_off.png');
-          position: 0 0;
-          repeat: no-repeat;
-        }
+    // Hexagon png
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      bottom: -1px;
+      left: -38px;
+      right: -38px;
+      pointer-events: none;
+      background: {
+        image: url('images/hexagon_off.png');
+        position: 0 0;
+        repeat: no-repeat;
       }
     }
   }
 
-  // 2 Columns
-  &[data-honeycomb-columns="2"] {
+  // Even numbers
+  // 2-4-6-8-10 Columns
+  &[data-honeycomb-columns="2"],
+  &[data-honeycomb-columns="4"],
+  &[data-honeycomb-columns="6"],
+  &[data-honeycomb-columns="8"],
+  &[data-honeycomb-columns="10"] {
     .item {
       &:nth-child(even) {
         margin-top: $item_height / 2;
       }
     }
   }
+
+  // Odd numbers
   // 3 Columns
   &[data-honeycomb-columns="3"] {
     .item {
-      &:nth-child(n) {
-        margin-top: 0;
-      }
       &:nth-child(3n + 2) {
-        margin-top: $item_height / 2;
-      }
-    }
-  }
-  // 4 Columns
-  &[data-honeycomb-columns="4"] {
-    .item {
-      &:nth-child(n) {
-        margin-top: 0;
-      }
-      &:nth-child(even) {
         margin-top: $item_height / 2;
       }
     }
@@ -96,11 +83,29 @@ ul {
   // 5 Columns
   &[data-honeycomb-columns="5"] {
     .item {
-      &:nth-child(n) {
-        margin-top: 0;
-      }
       &:nth-child(5n + 2),
       &:nth-child(5n + 4) {
+        margin-top: $item_height / 2;
+      }
+    }
+  }
+  // 7 Columns
+  &[data-honeycomb-columns="7"] {
+    .item {
+      &:nth-child(7n + 2),
+      &:nth-child(7n + 4),
+      &:nth-child(7n + 6) {
+        margin-top: $item_height / 2;
+      }
+    }
+  }
+  // 9 Columns
+  &[data-honeycomb-columns="9"] {
+    .item {
+      &:nth-child(9n + 2),
+      &:nth-child(9n + 4),
+      &:nth-child(9n + 6),
+      &:nth-child(9n + 8) {
         margin-top: $item_height / 2;
       }
     }

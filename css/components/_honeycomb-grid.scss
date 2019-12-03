@@ -2,28 +2,6 @@
 $item_width: 7.92rem;
 $item_height: 9.3rem;
 
-// Colors
-$green: #96b38a;
-$gold: #ddca7e;
-$black: #1e1f26;
-
-// Global styling
-body {
-  background-color: $green;
-  color: $gold;
-}
-
-ul {
-  list-style: none;
-}
-
-// Bootstrap container
-.container-fluid {
-  background-color: $black;
-  padding: 2rem;
-  max-width: 82rem;
-}
-
 // List container
 .honeycomb-list {
   display: grid;
@@ -34,7 +12,6 @@ ul {
 
   // List item
   .item {
-    padding: 4rem 1rem;
     text-align: center;
     position: relative;
     height: $item_height;
@@ -50,7 +27,7 @@ ul {
       right: -38px;
       pointer-events: none;
       background: {
-        image: url('images/hexagon_off.png');
+        image: url('../images/hexagon_off.png');
         position: 0 0;
         repeat: no-repeat;
       }
